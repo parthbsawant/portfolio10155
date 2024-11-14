@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            margin-top: 20px; 
+            padding-top: 80px; 
+        }
+        
+        body {
+            background-color: #ffffff;
+            color: #1484CD;
+            font-family: "Poppins", sans-serif;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: #ffffff;
+            padding: 25px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            
+        }
+        .navbar {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .social-icons {
+        position: absolute;
+        right: 220px; 
+        top: 120px; 
+        display: flex;
+        gap: 25px;
+        }
+
+        .social-icons img {
+        width: 40px; /* Icon size */
+        height: 40px;
+        }
+
+        /* .navbar-line {
+            border: none;
+            border-top: 7px solid #0A5E8C;
+            width: 100%;
+            margin: 0;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            top: 90px;
+            padding-left: 50px; 
+            padding-right: 50px; 
+        } */
+
+
+
+        .instagram {
+            right: 20px;
+            top: 100px;
+        }
+
+        .linkedin {
+            right: 20px;
+            top: 140px;
+        }
+
+        .github {
+            right: 20px;
+            top: 180px;
+        }
+
+        .hackerrank {
+            right: 20px;
+            top: 220px;
+        }
+
+        .email {
+        right: 20px;
+        top: 260px;
+        }
+
+
+        nav ul li {
+            list-style: none;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0A5E8C;  
+            color: #ffffff; 
+            border-radius: 20px;
+            text-decoration: none; 
+            font-weight: bold;
+            transition: background-color 0.3s; 
+        }
+
+        nav ul li a:visited {
+            color: #ffffff; 
+        }
+
+
+        nav ul li a:hover {
+            background-color: #ffcc00; 
+        }
+
+
+        nav ul li a:active {
+            background-color: #0A5E8C;
+            color: #ffffff;
+        }
+
+        
+        .left{
+            display: flex;
+            height: 300px;
+            width: 300px;
+            margin-top: 60px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+            padding: 10px 0;
+            margin-top: 60px;
+            
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .left img {
+        margin-top: 20px; 
+        }
+
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 25px;
+        }
+
+        .rightsection {
+            width: 80%;
+            height: 80%;
+            margin: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+
+        .rightsection img {
+            width: 90%;
+            max-width: 90%;
+            height: 200%;
+            object-fit: cover;
+        }
+
+        .leftsection {
+            width: 80%;
+            font-size: 2.5rem; 
+            margin: 70px 100px;
+            align-items: center;
+        }
+
+        .newcolor {
+            color: #1484CD;
+        }
+
+        .professionalsummary,
+        .experience, .skills, .socialwork, .education {
+            padding: 50px;
+            margin: auto;
+            max-width: 800px;
+            text-align: left; 
+        }
+
+        .professionalsummary h2,
+        .experience h2,
+        .skills h2, .socialwork h2, .education h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1484CD;
+            border: 10px;
+        }
+
+        .socialwork h3{
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #1484CD;
+            border: 10px;
+        }
+
+        .professionalsummary p,
+        .experience ul,
+        .skills ul, .socialwork p, .education ul {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: auto;
+            list-style-type: none; 
+            padding-left: 20px; 
+            margin: 0;
+            text-align: justify;
+        }
+
+        .skills ul ul { 
+        list-style-type: disc; 
+        padding-left: 20px;
+        }
+
+        .skills ul li {
+        padding: 5px 0;
+        }
+
+        .skills ul img {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+            vertical-align: center;
+        }
+
+        .skills ul img {
+            width: 40px;
+            height: 40px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .skills ul li h3{
+            font-weight: normal;
+        }
+        
+        .experience ul li h3{
+            font-weight: normal;
+        }
+
+        .socialwork h3 img{
+            width: 40px;
+            height: 40px;
+            margin-left: 8px;
+            vertical-align: middle; 
+        }
+
+        .education ul li{
+            padding: 5px 0;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left"><img src="file.png" alt="Logo"></div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#professionalsummary">About</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/parthbsawant/" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/yourusername" target="_blank">
+                <img src="github.png" alt="GitHub">
+            </a>
+            <a href="https://www.hackerrank.com/profile/parthbsawant" target="_blank">
+                <img src="hackerrank.png" alt="HackerRank">
+            </a>
+            <a href="mailto:parthbsawant@gmail.com" target="_blank">
+                <img src="gmail.png" alt="Email">
+            </a>
+            <a href="https://www.instagram.com/_patha04_" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+        </div>
+
+        <!-- <div class="navbar-line"></div> -->
+
+        
+        
+    </header>
+
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                <h2>Hello !!!!</h2>
+                I am <span class="newcolor">Parth Sawant......</span> 
+                <br>
+                I am a Software Engineering Student....
+                <br>
+                Welcome To My Portfolio
+            </div>
+            <div class="rightsection">
+                <img src="image_6.png" alt="">
+            </div>
+        </section>
+
+        <section class="professionalsummary" id="professionalsummary">
+            <h2>Professional Summary</h2>
+            <p>
+                I’m a second-year Electronics and Computer Science Engineering student at Fr. Conceicao Rodrigues College of Engineering with a real curiosity about how technology can shape the future. I’m especially interested in areas like Artificial Intelligence, Blockchain, Data Analytics, and Finance, as I believe they hold incredible potential to solve big challenges. Through my studies, I’ve built a solid foundation in programming and analytical skills, and I’m eager to keep learning and finding ways to apply what I know in meaningful ways. My goal is to use my knowledge and skills to make a positive impact and contribute to the exciting changes happening in tech.
+            </p>
+        </section>
+
+        <section class="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li><h3>Game Development Intern - Game Developers Association CRCE</h3></li>
+                <li><h3>Front End Developer Intern - ABC Ltd.</h3></li>
+                <li><h3>Research Analyst Intern - DEF Pvt. Ltd.</h3></li>
+            </ul>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><h3>Programming Languages:</h3> 
+                    <ul>
+                        <li>HTML <img src="html.png" alt="HTML Logo"></li>
+                        <li>CSS <img src="css.png" alt="CSS Logo"></li>
+                        <li>JavaScript <img src="javascript.png" alt="JavaScript Logo"></li>
+                        <li>Python <img src="python.png" alt="Python Logo"></li>
+                    </ul>
+                </li>
+                <li><h3>Data Structures & Algorithm in C++ <img src="cpp.png" alt="C++ Logo"></h3></li>
+                <li><h3>Object-Oriented Programming Using Java <img src="java.png" alt="Java Logo"></h3></li>
+                <li><h3>Unreal Engine: For Game Development <img src="unreal.png" alt="Unreal Engine Logo"></h3></li>
+            </ul>
+        </section>
+
+        <section class="education">
+            <h2>Education</h2>
+            <ul>
+                <li>B.E Electronics & Computer Science : Fr. Conceicao Rodrigues College Of Engineering
+                    <br>
+                    Marks : 7.5 CGPA
+                </li>
+                <li>Class XII : Mother Teressa Jr College & Convent School
+                    <br>
+                    Marks : 78%
+                </li>
+                <li>
+                    Class X : New Horizon Public School, Airoli
+                    <br>
+                    Marks : 88.4%
+                </li>
+                <li></li>
+            </ul>
+        </section>
+
+        <section class="socialwork">
+            <h2>Social Activities & Volunteering</h2>
+            <h3>Lions Club Of Airoli Symphony <img src="Lionsclub.png" alt=""></h3>
+            <p>
+                At the Lions Club of Airoli, I led a team of 10 students and volunteers to respond to the 2019 Kolhapur-Sangli floods. Through fundraising efforts, including awareness campaigns and charity events, we raised 4 lakhs in essential supplies. We ensured aid reached affected families and communities. This experience taught me valuable lessons in leadership, teamwork, and the impact of service. I'm grateful for the opportunity to contribute to meaningful change and witness community resilience.
+            </p>
+        </section>
+    </main>
+
+    <!-- <footer>
+        <section class="conatct" id="contact">
+            <h2>Contact Number : 9321682688</h2>
+            <h2>Mail : parthbsawant@gmail.com</h2>
+
+        </section>
+    </footer> -->
+
+    <script>
+        document.querySelector('a[href="#professional-summary"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('#professional-summary').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start' 
+        });
+    });
+    </script>
+    
+
+
+</body>
+</html>
+
+
+
+
